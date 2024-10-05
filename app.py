@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, send_file, jsonify, redirect,
 app = Flask(__name__)
 
 # Folder to save the processed files
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/tmp'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Function that processes the zip file using FolderProcessor
