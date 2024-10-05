@@ -19,12 +19,12 @@ class ZipFolderManager:
         
         self.folder = zip_folder
         
-        self.extraction_folder = 'Extractedfiles'
-        self.organization_folder = 'OrganizedFiles'
-        self.organization_folder_zip = 'OrganizedFilesZip'
-        self.all_pdfs = 'OrganizedFiles/PDFs'
-        self.all_dwgs = 'OrganizedFiles/DWGs'
-        self.all_dxfs = 'OrganizedFiles/DXFs'
+        self.extraction_folder = 'tmp/Extractedfiles'
+        self.organization_folder = 'tmp/OrganizedFiles'
+        self.organization_folder_zip = 'tmp/OrganizedFilesZip'
+        self.all_pdfs = 'tmp/OrganizedFiles/PDFs'
+        self.all_dwgs = 'tmp/OrganizedFiles/DWGs'
+        self.all_dxfs = 'tmp/OrganizedFiles/DXFs'
     
         self.extract_folder()
         self.organize_folders()
