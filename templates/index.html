@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <section class="section-text text">
+            <h1 class="section-text__title">Trasforme .zip em</h1>
+            <h1 class="section-text__title">dados em <span>segundos.</span></h1>
+            <p class="section-text__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet metus scelerisque ipsum.
+            </p>
+
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" required style="display: none;">
+                <button type="button" class="section-text__upload-button" onclick="uploadFile()">
+                    Enviar arquivo
+                    <img src="{{ url_for('static', filename='img/uploadIcon.svg') }}" alt="upload icon">
+                </button>
+            </form>
+
+            <!-- Tela de carregamento -->
+            <div id="loading" style="display: none;">
+                <p>Processando, por favor aguarde...</p>
+            </div>
+        </section>
+    </div>
+    <script src="../static/js/script.js"></script>
+{% endblock %}
+
+
+
